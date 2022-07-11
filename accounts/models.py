@@ -13,8 +13,8 @@ class Account(AbstractBaseUser):
 
     #campos atributos de django
     
-    date_joined = models.DateTimeField(auto_now_add=True)
-    last_login = models.DecimalField(auto_now_add=True)
+    date_joined = models.DateTimeField(auto_now=True)
+    last_login = models.DecimalField(max_digits = 5, decimal_places = 2)
     is_admin = models.BooleanField(default=False)
     is_staff = models.BooleanField(default=False)
     is_active: models.BooleanField(default=False)
